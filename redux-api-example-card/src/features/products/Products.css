@@ -1,0 +1,54 @@
+/* Flex container for products */
+.products {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of products */
+  gap: 20px;       /* Spacing between product cards */
+  justify-content: center; /* Center align items */
+  padding: 20px;
+}
+
+/* Each product card */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+  margin: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Product price */
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+/* Button styles */
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+/* Hover effect for button */
+.card button:hover {
+  opacity: 0.7;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; /* Make product cards full-width on smaller screens */
+    max-width: 100%; /* Ensure max-width is 100% */
+  }
+}
+.main-div{
+  border-radius: 2px black solid;
+  background-color: antiquewhite;
+}

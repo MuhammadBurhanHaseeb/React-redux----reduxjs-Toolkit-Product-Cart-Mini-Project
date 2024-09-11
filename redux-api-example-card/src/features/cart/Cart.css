@@ -1,0 +1,96 @@
+/* Main cart item container */
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  align-items: center; /* Align items vertically in the middle */
+  justify-content: space-between; /* Distribute space between items */
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  width: 100%;
+}
+
+/* Image styling */
+.cart-item img {
+  max-width: 150px; /* Limit the image size */
+  height: auto;
+  object-fit: cover;
+  margin-right: 20px; /* Spacing between image and content */
+}
+
+/* Description section */
+.description {
+  flex: 1; /* Take up available space */
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* Quantity select */
+.quantity {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.quantity select {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* Close button */
+.close button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close button:hover {
+  opacity: 0.8;
+}
+
+/* Add to Cart button */
+.cart-item p button {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.cart-item p button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .cart-item img {
+    width: 100%; /* Full width image on small screens */
+    max-width: none;
+    margin-bottom: 15px;
+  }
+
+  .quantity {
+    margin-bottom: 15px; /* Add space between elements on small screens */
+  }
+
+  .close {
+    align-self: flex-end; /* Move the close button to the right */
+    margin-top: 10px;
+  }
+}
